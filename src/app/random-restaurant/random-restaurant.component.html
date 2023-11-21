@@ -1,2 +1,10 @@
-<button mat-raised-button color="accent" (click)="getRandomRestaurant()">Get Random Restaurant</button>
-<p *ngIf="selectedRestaurant">Selected Restaurant: {{ selectedRestaurant }}</p>
+<mat-card *ngIf="selectedRestaurant">
+  <mat-card-title>{{ selectedRestaurant.name }}</mat-card-title>
+  <mat-card-content>
+    <p><a href="{{ selectedRestaurant.googleMapsUrl }}" target="_blank">Google Maps</a></p>
+    <p>Submitted by: {{ selectedRestaurant.creatorName }}</p>
+    <p>{{ selectedRestaurant.caption }}</p>
+  </mat-card-content>
+</mat-card>
+<button mat-raised-button color="primary">Get Random Restaurant</button>
+

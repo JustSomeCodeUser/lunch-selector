@@ -1,4 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+/* Import the Angular Material theme file */
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Optional: Define a custom theme color */
+:root {
+  --theme-color-primary: #673ab7; /* deep purple */
+  --theme-color-accent: #ffc107; /* amber */
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Style for headers and buttons */
+h2 {
+  color: var(--theme-color-primary);
+}
+
+button {
+  margin-top: 10px;
+}

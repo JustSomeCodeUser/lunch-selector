@@ -1,5 +1,27 @@
-<mat-form-field appearance="fill">
-  <mat-label>Enter restaurant name</mat-label>
-  <input matInput [(ngModel)]="restaurantName" name="restaurantName">
-</mat-form-field>
-<button mat-raised-button color="primary" (click)="submitRestaurant()">Submit</button>
+<mat-card>
+  <mat-card-title>Add a New Restaurant</mat-card-title>
+  <mat-card-content>
+    <mat-form-field appearance="fill">
+      <mat-label>Restaurant Name</mat-label>
+      <input matInput placeholder="Enter Restaurant Name" [(ngModel)]="restaurantData.name" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Google Maps URL</mat-label>
+      <input matInput placeholder="Enter Google Maps URL" [(ngModel)]="restaurantData.googleMapsUrl" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Your Name</mat-label>
+      <input matInput placeholder="Enter Your Name" [(ngModel)]="restaurantData.creatorName" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Caption</mat-label>
+      <textarea matInput placeholder="Enter a Caption" [(ngModel)]="restaurantData.caption" required></textarea>
+    </mat-form-field>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="submitRestaurant()">Submit</button>
+  </mat-card-actions>
+</mat-card>

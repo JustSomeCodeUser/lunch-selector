@@ -1,0 +1,26 @@
+mat-card {
+  margin: 20px;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+mat-card-title {
+  color: var(--theme-color-primary);
+  text-align: center;
+}
+
+button[mat-raised-button] {
+  width: 100%;
+  color: #fff;
+  background-color: var(--theme-color-accent);
+}
+
+input[matInput], textarea[matInput] {
+  padding: 8px;
+}
