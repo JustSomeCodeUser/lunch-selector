@@ -6,15 +6,27 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class RestaurantService {
-  private apiUrl = '/api';
+  private apiUrl = '/api/choices';
 
   constructor(private http: HttpClient) {}
 
-  submitRestaurant(name: string): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/restaurants`, { name });
+  submitRestaurant(restaurantData: { name: string; googleMapsUrl: string; creatorName: string; caption: string }): Observable<any> {
+    return this.http.post<any>(this.apiUrl, restaurantData);
+  }
+
+  getAllRestaurants(): Observable<any> {
+    return this.http.get<any>(this.apiUrl);
   }
 
   getRandomRestaurant(): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/restaurants/random`);
+    return this.http.get<any>(`${this.apiUrl}/random`);
+  }
+
+  updateRestaurant(id: number, updateData: { name: string; googleMapsUrl: string; creatorName: string; caption: string }): Observable<any> {
+    return this.http.put<any>(`${this.apiUrl}/${id}`, updateData);
+  }
+
+  deleteRestaurant(id: number): Observable<any> {
+    return this.http.delete<any>(`${this.apiUrl}/${id}`);
   }
 }
