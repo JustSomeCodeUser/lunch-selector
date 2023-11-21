@@ -8,20 +8,20 @@
 
     <mat-form-field appearance="fill">
       <mat-label>Google Maps URL</mat-label>
-      <input matInput placeholder="Enter Google Maps URL" [(ngModel)]="restaurantData.googleMapsUrl" required>
+      <input matInput placeholder="Enter Google Maps URL" [(ngModel)]="restaurantData.googleMapsUrl">
     </mat-form-field>
 
     <mat-form-field appearance="fill">
       <mat-label>Your Name</mat-label>
-      <input matInput placeholder="Enter Your Name" [(ngModel)]="restaurantData.creatorName" required>
+      <input matInput placeholder="Enter Your Name" [(ngModel)]="restaurantData.creatorName">
     </mat-form-field>
 
     <mat-form-field appearance="fill">
       <mat-label>Caption</mat-label>
-      <textarea matInput placeholder="Enter a Caption" [(ngModel)]="restaurantData.caption" required></textarea>
+      <textarea matInput placeholder="Enter a Caption" [(ngModel)]="restaurantData.caption"></textarea>
     </mat-form-field>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button color="primary" (click)="submitRestaurant()">Submit</button>
+    <button mat-raised-button color="primary" (click)="submitRestaurant()">Add Suggestion</button>
   </mat-card-actions>
 </mat-card>

@@ -1,3 +1,6 @@
+<div class="button-wrapper">
+  <button mat-raised-button color="primary" (click)="getRandomRestaurant()">Get Today Restaurant!</button>
+</div>
 <mat-card *ngIf="selectedRestaurant">
   <mat-card-title>{{ selectedRestaurant.name }}</mat-card-title>
   <mat-card-content>
@@ -6,5 +9,3 @@
     <p>{{ selectedRestaurant.caption }}</p>
   </mat-card-content>
 </mat-card>
-<button mat-raised-button color="primary">Get Random Restaurant</button>
-

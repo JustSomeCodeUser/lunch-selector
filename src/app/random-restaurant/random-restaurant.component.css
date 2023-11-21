@@ -1,7 +1,11 @@
 mat-card {
-  margin: 20px;
+  width: 50%;
+  max-width: 600px;
   padding: 20px;
-  background: #ffffff;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--theme-color-accent);
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
@@ -10,9 +14,14 @@ mat-card-title {
 }
 
 button[mat-raised-button] {
-  width: 100%;
-  color: #fff;
+  width: 50%;
+  display: block;
+  color: var(--theme-color-accent);
   background-color: var(--theme-color-primary);
+  margin: 0 auto;
+  max-width: 600px;
+  height: 50px;
+  font-size: 20px;
 }
 
 /* Adjust the styling for the displayed restaurant details */

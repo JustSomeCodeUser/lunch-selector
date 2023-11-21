@@ -4,6 +4,7 @@ import {FormsModule} from "@angular/forms";
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import {Restaurant} from "../interfaces/restaurant.interface";
+import {MatButtonModule} from "@angular/material/button";
 
 @Component({
   selector: 'app-restaurant-input',
@@ -12,6 +13,7 @@ import {Restaurant} from "../interfaces/restaurant.interface";
     FormsModule,
     MatCardModule,
     MatInputModule,
+    MatButtonModule,
     // ... other imports
   ],
   templateUrl: './restaurant-input.component.html',

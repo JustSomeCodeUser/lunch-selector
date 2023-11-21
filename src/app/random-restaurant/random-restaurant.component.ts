@@ -4,11 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { RestaurantService } from "../restaurant.service";
 import {Restaurant} from "../interfaces/restaurant.interface";
 import {MatCardModule} from "@angular/material/card";
+import {MatButtonModule} from "@angular/material/button";
 
 @Component({
   selector: 'app-random-restaurant',
   standalone: true,
-  imports: [CommonModule, FormsModule, MatCardModule],
+  imports: [CommonModule, FormsModule, MatCardModule, MatButtonModule],
   templateUrl: './random-restaurant.component.html',
   styleUrls: ['./random-restaurant.component.css']
 })
